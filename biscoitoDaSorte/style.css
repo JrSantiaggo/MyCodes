@@ -111,7 +111,22 @@ h2 {
     font-size: 24px;
     line-height: 29px;
     font-weight: 400;
-    color: #000000;
+    color: #000000;  
+}
+.sorte{
+  animation-name: bottomToTop;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes bottomToTop {
+  0%{
+    transform: translateY(13rem) scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .screen2 img{
