@@ -1,15 +1,10 @@
-const { request } = require("express");
 const express = require("express");
+
+const routes = require("./routes")
 
 const app = express();
 app.use(express.json());
-
-//product?page=2&limit=10 = optional dps do ?
-app.post("/users", (request, response) => {
-  const { name, email, password} = request.body
- 
-  response.json({ name, email, password})
-})
+app.use(routes)
 
 const PORT = 3333;
 
