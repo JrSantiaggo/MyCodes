@@ -6,7 +6,6 @@ const UserController = require("../controllers/UserController")
 const usersrRouter = Router()
 
 
-
 function myMiddleware(request, response, next){
   const {isAdmin} = request.body
   if(!isAdmin){
@@ -14,10 +13,6 @@ function myMiddleware(request, response, next){
   }
   next()
 }
-
-
-
-
 
 
 const userController = new UserController()
